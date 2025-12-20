@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"com.example.ExampleModClient"
+		],
+		"fabric-datagen": [
+			"io.ticsea.datagen.DataGenerator"
 		]
 	},
 	"mixins": [

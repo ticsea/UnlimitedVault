@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:trial_key",
+    "minecraft:emerald"
+  ],
+  "result": {
+    "count": 1,
+    "id": "unlimitedvault:active_trial_key"
+  }
+}

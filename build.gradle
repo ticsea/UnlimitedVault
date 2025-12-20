@@ -18,11 +18,17 @@ repositories {
 	// for more information about repositories.
 }
 
+fabricApi {
+	configureDataGeneration() {
+		client = false
+	}
+}
+
 loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"modid" {
+		"unlimitedvault" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
