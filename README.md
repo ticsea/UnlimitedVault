@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./src/main/resources/icon2Readme.png.png" alt="logo" width="200" title="None">
+    <img src="./src/main/resources/icon2Readme.png" alt="logo" width="200" title="None">
 </p>
 <hr>
 <p align="center">A Minecraft mod about disable interaction limit of vault.</p>
