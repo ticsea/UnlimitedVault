@@ -17,13 +17,14 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(VaultBlock.class)
 public abstract class VaultBlockMixin {
-    @Shadow @Final public static Property<VaultState> STATE;
+    @Shadow @Final public static Property<@org.jetbrains.annotations.NotNull VaultState> STATE;
 
     @Inject(method = "useItemOn",
             at = @At("HEAD"))
@@ -36,19 +37,22 @@ public abstract class VaultBlockMixin {
                     VaultSharedData vaultSharedData = vaultBlockEntity.getSharedData();
                     BlockState blockState2 = blockState.setValue(VaultBlock.STATE, VaultState.ACTIVE);
 
+                    if (vaultServerData == null) return;
+
                     ((CleanSet)vaultServerData).unlimitedvualt_cleanSet();
-                    setVaultState(serverLevel, blockPos, blockState, blockState2, vaultConfig, vaultSharedData);
+                    unlimitedVault$setVaultState(serverLevel, blockPos, blockState, blockState2, vaultConfig, vaultSharedData);
                 }
             }
         }
     }
 
-    private static void setVaultState(
+    @Unique
+    private static void unlimitedVault$setVaultState(
             ServerLevel serverLevel, BlockPos blockPos, BlockState blockState, BlockState blockState2, VaultConfig vaultConfig, VaultSharedData vaultSharedData
     ) {
         VaultState vaultState = blockState.getValue(VaultBlock.STATE);
         VaultState vaultState2 = blockState2.getValue(VaultBlock.STATE);
         serverLevel.setBlock(blockPos, blockState2, 3);
-        vaultState.onTransition(serverLevel, blockPos, vaultState2, vaultConfig, vaultSharedData, (Boolean)blockState2.getValue(VaultBlock.OMINOUS));
+        vaultState.onTransition(serverLevel, blockPos, vaultState2, vaultConfig, vaultSharedData, blockState2.getValue(VaultBlock.OMINOUS));
     }
 }

@@ -1,12 +1,16 @@
-package com.example;
+package io.ticsea;
 
+import io.ticsea.event.VaultBlockLootTableLoadEvent;
+import io.ticsea.item.ActiveTrialKey;
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ExampleMod implements ModInitializer {
-	public static final String MOD_ID = "modid";
+public class UnlimitedVault implements ModInitializer {
+	public static final String MOD_ID = "unlimitedvault";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
@@ -20,6 +24,8 @@ public class ExampleMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
-		ActiveTrialKey.init();
+		//		VaultBlockLootTableLoadEvent.init();
+//		ActiveTrialKey.init();
+		ActiveTrialKey.addToCreativeTab();
 	}
 }

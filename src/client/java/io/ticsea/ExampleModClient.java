@@ -1,4 +1,4 @@
-package com.example;
+package io.ticsea;
 
 import net.fabricmc.api.ClientModInitializer;
 

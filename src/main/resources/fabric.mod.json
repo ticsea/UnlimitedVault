@@ -1,40 +1,41 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "unlimitedvault",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Unlimited Vault",
+	"description": "Disable the vault size limit",
 	"authors": [
-		"Me!"
+		"Ticsea!"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "",
+		"sources": ""
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"license": "ARR",
+	"icon": "assets/unlimitedvault/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"io.ticsea.UnlimitedVault"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+          "io.ticsea.ExampleModClient"
 		],
 		"fabric-datagen": [
 			"io.ticsea.datagen.DataGenerator"
 		]
+
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"unlimitedvault.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "unlimitedvault.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
 		"fabricloader": ">=0.18.2",
-		"minecraft": "~1.21.11",
+		"minecraft": "~1.21.6",
 		"java": ">=21",
 		"fabric-api": "*"
 	},
