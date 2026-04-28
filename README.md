@@ -13,7 +13,7 @@
 </p>
 
 ## Features
-- remove the vault's interaction limit, allowing players to open and interact with the same vault repeatedly.
+- remove the vault's interaction limit, When players use the special item on a vault,
 
 ## Special Item
 - Active Trial Key: can be crafted using 1 Trial Key and 1 Emerald.
