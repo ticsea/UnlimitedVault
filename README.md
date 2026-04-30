@@ -19,6 +19,10 @@
 - Active Trial Key: can be crafted using 1 Trial Key and 1 Emerald.
 - This item functions like a Trial. when you use it to interact with a vault, the vault's interaction limit will be permanently removed
 
+## Notes
+- The repo after version 1.21.11 has moved to https://codeberg.org/ticsea/unlimitedVault
+- But you can still open issues in here.
+
 ## License
 - Feel free to learn from it.
 - non-commercial use allowed.
