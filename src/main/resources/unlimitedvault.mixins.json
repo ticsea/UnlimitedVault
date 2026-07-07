@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "me.afk.unlimitedvault.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "VaultBlockMixin",
+    "VaultServerDateMixin"
+  ]
+}
