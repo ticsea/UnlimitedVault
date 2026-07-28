@@ -306,6 +306,7 @@ mods.clothconfig.ref = "21.11.151"
 mods.clothconfig.range = ">=21.11.151"
 mods.modmenu.ref = "17.0.0-alpha.1"
 mods.modmenu.range = ">=17.0.0"
+deps.fabric_api = "0.141.6+1.21.11"
 
 ["neoforge-1.21.11"]
 mc.type = "release"
@@ -326,6 +327,7 @@ mods.clothconfig.ref = "26.1.154"
 mods.clothconfig.range = ">=26.1.154"
 mods.modmenu.ref = "18.0.0-alpha.8"
 mods.modmenu.range = ">=18.0.0"
+deps.fabric_api = "0.155.2+26.1.2"
 
 
 ["neoforge-26.1.2"]
@@ -348,6 +350,7 @@ mods.clothconfig.ref = "26.1.154"
 mods.clothconfig.range = ">=26.1.154"
 mods.modmenu.ref = "18.0.0-alpha.8"
 mods.modmenu.range = ">=18.0.0"
+deps.fabric_api = "0.156.0+26.2"
 
 ["neoforge-26.2"]
 mc.type = "release"

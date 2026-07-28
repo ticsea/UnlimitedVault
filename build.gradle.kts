@@ -156,9 +156,15 @@ dependencies {
 	if (loader == "fabric") {
 		modImplementation("net.fabricmc:fabric-loader:${required("deps.fabric_loader")}")
 
-//		modImplementation("net.fabricmc.fabric-api:fabric-command-api-v2:${required("deps.fabric_api")}")
 //		modImplementation(fabricApi.module("fabric-command-api-v2", required("deps.fabric_api")))
-//		modImplementation("net.fabricmc.fabric-api:fabric-api:${required("deps.fabric_api")}")
+
+		if (sc.current.parsed > "1.21.1") {
+			modImplementation(fabricApi.module("fabric-client-gametest-api-v1", required("deps.fabric_api")))
+			modImplementation(fabricApi.module("fabric-resource-loader-v1", required("deps.fabric_api")))
+		} else {
+			modImplementation(fabricApi.module("fabric-gametest-api-v1", required("deps.fabric_api")))
+			modImplementation(fabricApi.module("fabric-resource-loader-v0", required("deps.fabric_api")))
+		}
 
 		// ModMenu API
 //		modImplementation("com.terraformersmc:modmenu:${required("mods.modmenu.ref")}")
@@ -169,6 +175,22 @@ dependencies {
 	}
 	if (loader == "neoforge") {
 		"neoForge"("net.neoforged:neoforge:${required("deps.neoforge_loader")}")
+	}
+
+	testImplementation("net.fabricmc:fabric-loader-junit:${required("deps.fabric_loader")}")
+}
+
+tasks.test {
+	useJUnitPlatform()
+}
+
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "example-mod-test-${project.name}"
+		enableGameTests = true // Default is true
+		enableClientGameTests = true // Default is true
+		eula = true // By setting this to true, you agree to the Minecraft EULA.
 	}
 }
 
@@ -184,6 +206,8 @@ loom {
 		forge.mixinConfigs("${required("mod.id")}.mixins.json")
 	}
 }
+
+
 
 tasks.processResources {
 	fun plainList(str: String) = str.lines().joinToString(", ") { it.trim() }
