@@ -12,13 +12,19 @@
     </a>
 </p>
 
+## Change
+
+- after 2.0.0 we don't need to use special key. just use one emerald.
+- and you can install it in server only.
+
 ## Features
 - **Unlimited Vault**: remove the (ominous)vault's interaction limit.
-- **Reset**: For Ominous Vaults that were sealed before installing this mod, these are a special item to reset it.
+- **Reset**: For (Ominous)Vaults that were sealed before installing this mod, these are a way to reset it (see usage).
 
 ## Usage
 - Use emerald to unlock (ominous)vault.
 
 # And
-This mod is modify from overhaul camera mod
+
+This mod is modified from overhaul camera mod
 https://github.com/Mirsario/Minecraft-CameraOverhaul
