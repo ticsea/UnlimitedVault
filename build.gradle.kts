@@ -184,16 +184,6 @@ tasks.test {
 	useJUnitPlatform()
 }
 
-fabricApi {
-	configureTests {
-		createSourceSet = true
-		modId = "example-mod-test-${project.name}"
-		enableGameTests = true // Default is true
-		enableClientGameTests = true // Default is true
-		eula = true // By setting this to true, you agree to the Minecraft EULA.
-	}
-}
-
 loom {
 	//accessWidenerPath = rootProject.file("src/main/resources/${required("mod.id")}.accesswidener")
 
