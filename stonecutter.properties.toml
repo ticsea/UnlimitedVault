@@ -361,3 +361,25 @@ loom.platform = "neoforge"
 mods.clothconfig.ref = "26.1.154"
 mods.clothconfig.range = ">=26.1.154"
 deps.neoforge_loader = "26.2.0.7-beta"
+
+["fabric-26.3"]
+mc.type = "release"
+mc.version = "26.3"
+mc.targets = "26.3"
+mc.latest = true
+loom.platform = "fabric"
+mods.clothconfig.ref = "26.1.154"
+mods.clothconfig.range = ">=26.1.154"
+mods.modmenu.ref = "18.0.0-alpha.8"
+mods.modmenu.range = ">=18.0.0"
+deps.fabric_api = "0.156.0+26.3"
+
+["neoforge-26.3"]
+mc.type = "release"
+mc.version = "26.3"
+mc.targets = "26.3"
+mc.latest = true
+loom.platform = "neoforge"
+mods.clothconfig.ref = "26.1.154"
+mods.clothconfig.range = ">=26.1.154"
+deps.neoforge_loader = "26.3.0.7-beta"
